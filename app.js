@@ -11,10 +11,10 @@ app.get('/saludo', (req, res) => {
 })
 
 app.post('/productoNotification', (req, res) => {
-    console.log(req.headers);
-    console.log(req.body);
+    /* console.log(req.headers);
+    console.log(req.body); */
     /* console.log(req); */
-    res.send('llego el producto');
+    res.json({header: req.headers, body: req.body});
 })
 
 app.listen(port, () => {
